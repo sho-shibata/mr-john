@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プライバシーポリシー - <span class="app-name">[アプリ名]</span></title>
+    <title>プライバシーポリシー</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -108,56 +108,9 @@
     </div>
 
     <!-- 動的な変数埋め込みスクリプト -->
+    <script src="config.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // 1. URLのクエリパラメータ（?app=kkbなど）を取得
-            const urlParams = new URLSearchParams(window.location.search);
-            let appKey = urlParams.get('app');
-
-            // 2. クエリパラメータが指定されていない場合、サブドメイン名から取得（フォールバック）
-            if (!appKey) {
-                const hostname = window.location.hostname;
-                appKey = hostname.split('.')[0].toLowerCase();
-            } else {
-                appKey = appKey.toLowerCase();
-            }
-
-            // アプリごとの動的設定マッピング
-            const configMap = {
-                "kkb": {
-                    name: "KKB",
-                    owner: "Sho Shibata",
-                    date: "2026年6月13日",
-                    contact: "App Storeのサポート窓口またはアプリ内のお問い合わせ"
-                },
-                "blog": {
-                    name: "Blog",
-                    owner: "Sho Shibata",
-                    date: "2026年6月13日",
-                    contact: "サポート窓口（support@mr-john-it.com）"
-                }
-            };
-
-            // デフォルトの設定（一致するキーがない、またはローカル開発用など）
-            const defaultConfig = {
-                name: "本アプリ",
-                owner: "Sho Shibata",
-                date: "2026年6月13日",
-                contact: "お問い合わせ窓口"
-            };
-
-            // 設定の解決
-            const config = configMap[appKey] || defaultConfig;
-
-            // プレースホルダー要素に流し込み
-            document.querySelectorAll(".app-name").forEach(el => el.textContent = config.name);
-            document.querySelectorAll(".app-owner").forEach(el => el.textContent = config.owner);
-            document.querySelectorAll(".app-date").forEach(el => el.textContent = config.date);
-            document.querySelectorAll(".app-contact").forEach(el => el.textContent = config.contact);
-            
-            // ページのタイトルを更新
-            document.title = `プライバシーポリシー - ${config.name}`;
-        });
+        applyAppConfig("プライバシーポリシー");
     </script>
 </body>
 </html>

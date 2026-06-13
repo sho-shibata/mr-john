@@ -110,10 +110,17 @@
     <!-- 動的な変数埋め込みスクリプト -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // 現在のホスト名（例: kkb.term-of-use.mr-john-it.com）を取得
-            const hostname = window.location.hostname;
-            // サブドメイン（ドットで区切られた先頭の部分）を取得
-            const subdomain = hostname.split('.')[0].toLowerCase();
+            // 1. URLのクエリパラメータ（?app=kkbなど）を取得
+            const urlParams = new URLSearchParams(window.location.search);
+            let appKey = urlParams.get('app');
+
+            // 2. クエリパラメータが指定されていない場合、サブドメイン名から取得（フォールバック）
+            if (!appKey) {
+                const hostname = window.location.hostname;
+                appKey = hostname.split('.')[0].toLowerCase();
+            } else {
+                appKey = appKey.toLowerCase();
+            }
 
             // アプリごとの動的設定マッピング
             const configMap = {
@@ -129,10 +136,9 @@
                     date: "2026年6月13日",
                     contact: "サポート窓口（support@mr-john-it.com）"
                 }
-                // 今後新しいアプリを追加する場合は、ここに行を追加するだけで対応できます
             };
 
-            // デフォルトの設定（一致するサブドメインがない、またはローカル開発用など）
+            // デフォルトの設定（一致するキーがない、またはローカル開発用など）
             const defaultConfig = {
                 name: "本アプリ",
                 owner: "Sho Shibata",
@@ -141,7 +147,7 @@
             };
 
             // 設定の解決
-            const config = configMap[subdomain] || defaultConfig;
+            const config = configMap[appKey] || defaultConfig;
 
             // プレースホルダー要素に流し込み
             document.querySelectorAll(".app-name").forEach(el => el.textContent = config.name);

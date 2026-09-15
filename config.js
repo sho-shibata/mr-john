@@ -12,6 +12,12 @@ const configMap = {
         owner: "Sho Shibata",
         date: "2026年6月13日",
         contact: "サポート窓口（support@mr-john-it.com）"
+    },
+    "stock": {
+        name: "Mr.John Stock Research",
+        owner: "Sho Shibata",
+        date: "2026年9月15日",
+        contact: "サポート窓口（support@mr-john-it.com）"
     }
 };
 

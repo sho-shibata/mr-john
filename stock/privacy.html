@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシーポリシー - Mr.John Stock Research</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f8fafc;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 44px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .badge {
+            display: inline-block;
+            background-color: #e0f2fe;
+            color: #0284c7;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+        }
+        h1 {
+            font-size: 26px;
+            border-bottom: 2px solid #0284c7;
+            padding-bottom: 12px;
+            color: #0f172a;
+            margin-top: 0;
+        }
+        h3 {
+            font-size: 18px;
+            margin-top: 32px;
+            border-left: 4px solid #0284c7;
+            padding-left: 12px;
+            color: #1e293b;
+        }
+        p, li {
+            font-size: 14.5px;
+            color: #334155;
+        }
+        .highlight-box {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 4px solid #16a34a;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .highlight-box strong {
+            color: #15803d;
+        }
+        .nav-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 13px;
+        }
+        .nav-links a {
+            color: #0284c7;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        .date {
+            text-align: right;
+            color: #64748b;
+            font-size: 13px;
+            margin-top: 40px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="badge">Mr.John Stock Research</div>
+        <h1>プライバシーポリシー</h1>
+        <div class="nav-links">
+            <a href="terms.html">📜 利用規約</a>
+            <span>•</span>
+            <span>🛡️ <strong>プライバシーポリシー</strong></span>
+            <span>•</span>
+            <a href="tokushoho.html">⚖️ 特定商取引法に基づく表記</a>
+        </div>
+
+        <p>Sho Shibata（以下、「当方」といいます。）は、株式分析＆クオンツAIターミナル「Mr.John Stock Research」（以下、「本サービス」といいます。）における、ユーザーの個人情報の取扱いについて、以下のとおりプライバシーポリシー（以下、「本ポリシー」といいます。）を定めます。</p>
+
+        <div class="highlight-box">
+            <strong>🔒 クレジットカード情報の非保持について</strong><br>
+            当方は、有料プラン決済において国際セキュリティ基準 PCI-DSS に準拠した Stripe, Inc. の決済代行システムを利用しています。<strong>お客様のクレジットカード番号、有効期限、セキュリティコード等は当方のサーバーには一切送信・保存されず</strong>、Stripe社によって最高水準の暗号化環境で安全に直接処理されます。
+        </div>
+
+        <h3>第1条（収集する情報および収集方法）</h3>
+        <p>当方は、本サービスの提供にあたり、以下の情報を取得することがあります。</p>
+        <ul>
+            <li><strong>アカウント登録情報</strong>: メールアドレス、ユーザー名、パスワード（bcryptアルゴリズムにより不可逆暗号化ハッシュとして保存）</li>
+            <li><strong>ソーシャルログイン情報</strong>: Google または GitHub アカウント連携時のユーザー識別子、公開メールアドレス</li>
+            <li><strong>決済識別情報</strong>: Stripeが発行する顧客ID（Customer ID）、サブスクリプションID、契約ステータス（クレジットカード番号自体は非保持）</li>
+            <li><strong>利用ログ情報</strong>: IPアドレス、ブラウザ種別、アクセス日時、仮想トレード操作ログ、SQL実行ログ、AI診断実行履歴</li>
+            <li><strong>外部通知設定</strong>: ユーザーが設定したSlackまたはDiscordのWebhook URL（売買アラート用）</li>
+        </ul>
+
+        <h3>第2条（個人情報の利用目的）</h3>
+        <p>当方は、取得したユーザー情報を以下の目的で利用します。</p>
+        <ol>
+            <li>本サービスのアカウント認証、セッション管理、および機能アクセスの権限制御（Free/Pro/Maxプラン）</li>
+            <li>有料サブスクリプションプランの請求処理、課金管理、領収書発行（Stripeカスタマーポータル連携）</li>
+            <li>仮想トレードボットの売買シグナル通知およびアラート配信（Slack, Discord, Email）</li>
+            <li>本人確認、メールアドレスの有効性確認（Email Verification）、および不正利用・スパムの防止</li>
+            <li>システムの障害対応、パフォーマンス監視、セキュリティ監査、およびサービス改善のための統計分析</li>
+            <li>重要なお知らせ、規約改定等のご連絡</li>
+        </ol>
+
+        <h3>第3条（外部委託および第三者サービスとの連携）</h3>
+        <p>当方は、利用目的の達成に必要な範囲において、以下の信頼性の高い第三者サービスを利用・連携しています。</p>
+        <ul>
+            <li><strong>Stripe, Inc.（決済処理基盤）</strong>: クレジットカード決済およびサブスクリプション課金管理のために利用します。</li>
+            <li><strong>Google LLC（Google Gemini API）</strong>: 企業の財務諸表および開示テキストの定性分析・AI診断生成のために利用します。利用者の個人特定情報は送信されません。</li>
+            <li><strong>メール配信基盤（SMTP / Gmail）</strong>: メールアドレス認証トークンの送信、および取引アラート配信のために暗号化通信（TLS）経由で利用します。</li>
+        </ul>
+
+        <h3>第4条（安全管理措置）</h3>
+        <p>当方は、取得した個人情報の漏洩、滅失または毀損の防止その他の安全管理のために、以下の技術的措置を講じています。</p>
+        <ul>
+            <li>全通信経路における SSL/TLS による暗号化</li>
+            <li>パスワードの bcrypt アルゴリズムによる不可逆ソルト付きハッシュ化</li>
+            <li>JSON Web Token（JWT）および HMAC-SHA256 署名によるセキュアな認証トークン発行</li>
+            <li>ロールベースアクセス制御（RBAC）によるデータ操作権限の厳格な分離</li>
+        </ul>
+
+        <h3>第5条（Cookie等の利用）</h3>
+        <p>本サービスは、ユーザーのログイン状態の維持、セッション管理、およびダッシュボード表示設定の保存のために、Cookieおよびブラウザのローカルストレージ（LocalStorage）を使用します。利用者はブラウザ設定によりCookieを無効化できますが、その場合ログインを伴う機能が正常に動作しない場合があります。</p>
+
+        <h3>第6条（個人情報の開示・訂正・削除・退会）</h3>
+        <p>ユーザーは、自己の個人情報について、開示、訂正、追加、削除、または利用停止を求めることができます。退会および登録データの完全削除をご希望の場合は、下記お問い合わせ窓口まで電子メールにてご連絡ください。本人確認完了後、法令に基づき遅滞なく対応いたします。</p>
+
+        <h3>第7条（お問い合わせ窓口）</h3>
+        <p>本ポリシーに関するお問い合わせは、以下の窓口までお願いいたします。</p>
+        <p><strong>運営者名</strong>: Sho Shibata（Mr.John Stock Research）<br>
+        <strong>お問い合わせ窓口</strong>: support@mr-john-it.com</p>
+
+        <p class="date">制定日：2026年9月15日</p>
+    </div>
+    <div class="footer">
+        &copy; 2026 Mr.John Stock Research / Sho Shibata. All Rights Reserved.
+    </div>
+</body>
+</html>

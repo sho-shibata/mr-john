@@ -14,7 +14,7 @@ const configMap = {
         name: "Blog",
         owner: "Sho Shibata",
         date: "2026年6月13日",
-        contact: "サポート窓口（support@mr-john-it.com）",
+        contact: "お問い合わせフォーム（https://blog.mr-john-it.com/inquiry?app=blog）",
         serviceType: "Webアプリケーション",
         dataTypes: "アカウント情報、記事・コメント、閲覧履歴、設定情報など",
         isInvestmentApp: false
@@ -23,7 +23,7 @@ const configMap = {
         name: "Mr.John Stock Research",
         owner: "Sho Shibata",
         date: "2026年9月15日",
-        contact: "サポート窓口（support@mr-john-it.com）",
+        contact: "お問い合わせフォーム（https://blog.mr-john-it.com/inquiry?app=stock-research）",
         serviceType: "株式分析＆クオンツAIターミナル",
         dataTypes: "アカウント情報、ポートフォリオ・仮想取引データ、分析設定、検索履歴など",
         isInvestmentApp: true

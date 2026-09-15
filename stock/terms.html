@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用規約 - Mr.John Stock Research</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f8fafc;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 44px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .badge {
+            display: inline-block;
+            background-color: #e0f2fe;
+            color: #0284c7;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+        }
+        h1 {
+            font-size: 26px;
+            border-bottom: 2px solid #0284c7;
+            padding-bottom: 12px;
+            color: #0f172a;
+            margin-top: 0;
+        }
+        h3 {
+            font-size: 18px;
+            margin-top: 32px;
+            border-left: 4px solid #0284c7;
+            padding-left: 12px;
+            color: #1e293b;
+        }
+        p, li {
+            font-size: 14.5px;
+            color: #334155;
+        }
+        .alert-box {
+            background-color: #fffbeb;
+            border: 1px solid #fde68a;
+            border-left: 4px solid #f59e0b;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .alert-box strong {
+            color: #b45309;
+        }
+        .nav-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 13px;
+        }
+        .nav-links a {
+            color: #0284c7;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        .date {
+            text-align: right;
+            color: #64748b;
+            font-size: 13px;
+            margin-top: 40px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="badge">Mr.John Stock Research</div>
+        <h1>利用規約</h1>
+        <div class="nav-links">
+            <span>📜 <strong>利用規約</strong></span>
+            <span>•</span>
+            <a href="privacy.html">🛡️ プライバシーポリシー</a>
+            <span>•</span>
+            <a href="tokushoho.html">⚖️ 特定商取引法に基づく表記</a>
+        </div>
+
+        <p>本利用規約（以下、「本規約」といいます。）は、Sho Shibata（以下、「当方」といいます。）が提供する株式分析＆クオンツAIターミナル「Mr.John Stock Research」（以下、「本サービス」といいます。）の利用条件を定めるものです。</p>
+        <p>本サービスを利用するユーザー（以下、「ユーザー」といいます。）は、本規約に同意の上、本サービスを利用するものとします。</p>
+
+        <div class="alert-box">
+            <strong>【重要】金融商品取引法に関する免責事項・投資自己責任の原則</strong><br>
+            本サービスが提供するクオンツ指標、Google Gemini AI による財務診断、バックテスト、仮想売買シミュレーション等は、すべて利用者の自己学習および分析支援を目的とした参考情報であり、<strong>金融商品取引法に基づく投資助言、代理、有価証券の売買推奨、または将来の利益保証を行うものでは一切ありません。</strong>投資の最終判断および結果は、<strong>すべてユーザー自身の自己責任</strong>となります。
+        </div>
+
+        <h3>第1条（適用・同意）</h3>
+        <p>本規約は、ユーザーと当方との間の本サービスの利用に関わる一切の関係に適用されるものとします。ユーザーは、本サービスのアカウント登録、ログイン、または本サービスの閲覧・利用を開始した時点で、本規約のすべての条項に有効に同意したものとみなされます。</p>
+
+        <h3>第2条（本サービスの機能）</h3>
+        <p>本サービスは、公開された財務情報・市場データに基づき、以下の機能を提供する情報分析・シミュレーション支援ツールです。</p>
+        <ul>
+            <li><strong>クオンツ・スクリーニング</strong>: Piotroski F-Score、Altman Z-Score、ROIC、FCF利回り、Sloan Ratio等の財務・テクニカル指標の自動算出</li>
+            <li><strong>AI財務診断</strong>: Google Gemini AIを活用した定性・定量分析カルテの自動生成</li>
+            <li><strong>戦略バックテスト</strong>: 過去データに基づく投資戦略のシミュレーション検証</li>
+            <li><strong>仮想トレード（Paper Trading）</strong>: 架空資金による取引シミュレーションおよび自動売買ボットロジックの動作検証</li>
+            <li><strong>DuckDB SQL コンソール</strong>: 株式データに対する高速クエリ実行環境</li>
+        </ul>
+
+        <h3>第3条（アカウント管理・データの管理とバックアップ）</h3>
+        <ol>
+            <li>ユーザーは、自己の責任においてアカウント登録情報（メールアドレス、パスワード等）を厳重に管理するものとし、第三者への譲渡・貸与・共有はできません。</li>
+            <li>本サービスに登録または記録されたデータ（アカウント情報、設定情報、ポートフォリオ・仮想取引履歴、分析設定、メモデータ等を含みますがこれらに限りません）の保管・管理およびバックアップは、ユーザーが自己の責任において行うものとします。</li>
+            <li>当方は、いかなる場合であっても、本サービス内のデータの消失、破損、変更等について復旧の義務を負わず、またこれによりユーザーまたは第三者に生じた損害について一切の責任を負いません。</li>
+        </ol>
+
+        <h3>第4条（有料プラン・課金・解約）</h3>
+        <ol>
+            <li>本サービスは、無料プラン（Free）および有料サブスクリプションプラン（Proプラン、Maxプラン等）を提供します。利用料金および支払条件は別途定める「特定商取引法に基づく表記」に従います。</li>
+            <li>有料プランの決済は、Stripe, Inc. の決済代行システムを利用して行われます。</li>
+            <li>有料プランは月次単位の自動継続課金です。ユーザーはアプリ内のカスタマーポータルよりいつでも次回の自動更新を停止（解約）することができます。</li>
+            <li>デジタルサービスの性質上、お申込み・決済完了後の返金、日割り計算による減額等には一切応じかねます。</li>
+        </ol>
+
+        <h3>第5条（金融商品取引法に関する重要免責事項・投資判断の完全自己責任・責任の制限）</h3>
+        <ol>
+            <li><strong>投資助言業の否認</strong>: 本サービスは、金融商品取引法第2条第8項第11号に規定される「投資助言・代理業」を行うものではなく、有価証券の価値等の分析に基づく投資判断に関し助言を行うものではありません。</li>
+            <li><strong>有価証券の売買勧誘・推奨の否認</strong>: 本サービスにおいて表示されるスコア、ランキング、AI診断結果（STRONG_BUY / BUY 等の表記を含みます）、シグナル、および通知は、アルゴリズムによるデータ抽出および機械学習モデルによる一般的な情報提供に過ぎず、特定の有価証券の売買を推奨または勧誘するものではありません。</li>
+            <li><strong>投資結果の完全自己責任</strong>: 実際の有価証券等の取引、投資銘柄の選定、売買価格・タイミング、資金配分等のあらゆる投資判断、およびそれにより生じた結果（投資元本の毀損、信用取引に伴う追加証拠金・追証の発生、利益の喪失、機会損失等を含みますがこれらに限りません）に対する<strong>全責任は、理由の如何を問わずすべてユーザー自身に帰属し、当方は一切の損害賠償責任または補償義務を負わないものとします。</strong></li>
+            <li><strong>AI・シミュレーション出力の非保証</strong>: Google Gemini AI を含む機械学習モデルの出力および過去データに基づくバックテスト・仮想売買の結果は、将来の相場動向や運用成果を保証するものではありません。</li>
+            <li><strong>市場データ・外部API・システム障害の免責</strong>: J-Quants、yfinance、EDINET等の外部データ提供元の障害、データの遅延、誤謬、通信回線の混雑、サーバーの停止、保守点検等に起因して生じた取引機会の喪失その他の損害について、当方は一切の責任を負いません。</li>
+            <li><strong>損害賠償額の上限</strong>: 消費者契約法その他の強行法規に基づき当方がユーザーに対して損害賠償責任を負う場合であっても、当方の賠償責任は、当方の故意または重過失による場合を除き、<strong>ユーザーが直近1ヶ月間に本サービスに対して実際に支払った利用料金の総額を上限</strong>とします。</li>
+        </ol>
+
+        <h3>第6条（禁止事項）</h3>
+        <p>ユーザーは、本サービスの利用にあたり、以下の行為を行ってはならないものとします。</p>
+        <ol>
+            <li>法令または公序良俗に違反する行為、犯罪行為に関連する行為</li>
+            <li>本サービスのサーバー、ネットワーク、APIに過度な負荷をかける行為（不正な自動巡回、スクレイピング等）</li>
+            <li>本サービスのリバースエンジニアリング、逆コンパイル、ソースコードの解析・複製行為</li>
+            <li>第三者の認証情報の不正利用、複数人でのアカウント共有</li>
+            <li>クレジットカードの不正利用または虚偽の決済情報を用いた登録・利用</li>
+            <li>その他、当方が不適切と判断する行為</li>
+        </ol>
+
+        <h3>第7条（サービスの停止・変更・終了）</h3>
+        <p>当方は、システムの保守点検、天災、通信回線の事故その他の不可抗力が発生した場合、または事業上の判断により、ユーザーに事前通知することなく本サービスの提供を一時停止、変更、または終了することができるものとします。これに起因してユーザーに生じた損害について当方は一切の責任を負いません。</p>
+
+        <h3>第8条（利用規約の改定）</h3>
+        <p>当方は、必要に応じて本規約を随時改定できるものとします。改定後の規約は本ウェブサイト上に掲示された時点より効力を生じるものとし、改定後も本サービスを利用し続けた場合、ユーザーは改定後の規約に同意したものとみなされます。</p>
+
+        <h3>第9条（準拠法および裁判管轄）</h3>
+        <p>本規約の解釈にあたっては日本法を準拠法とし、本サービスに関して紛争が生じた場合には、東京地方裁判所を第一審の専属的合意管轄裁判所とします。</p>
+
+        <p class="date">制定日：2026年9月15日</p>
+    </div>
+    <div class="footer">
+        &copy; 2026 Mr.John Stock Research / Sho Shibata. All Rights Reserved.
+    </div>
+</body>
+</html>

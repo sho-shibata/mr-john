@@ -5,19 +5,28 @@ const configMap = {
         name: "KKB",
         owner: "Sho Shibata",
         date: "2026年6月13日",
-        contact: "App Storeのサポート窓口またはアプリ内のお問い合わせ"
+        contact: "App Storeのサポート窓口またはアプリ内のお問い合わせ",
+        serviceType: "スマートフォン向けアプリケーション",
+        dataTypes: "家計簿データ、収支記録、設定情報など",
+        isInvestmentApp: false
     },
     "blog": {
         name: "Blog",
         owner: "Sho Shibata",
         date: "2026年6月13日",
-        contact: "サポート窓口（support@mr-john-it.com）"
+        contact: "サポート窓口（support@mr-john-it.com）",
+        serviceType: "Webアプリケーション",
+        dataTypes: "アカウント情報、記事・コメント、閲覧履歴、設定情報など",
+        isInvestmentApp: false
     },
     "stock": {
         name: "Mr.John Stock Research",
         owner: "Sho Shibata",
         date: "2026年9月15日",
-        contact: "サポート窓口（support@mr-john-it.com）"
+        contact: "サポート窓口（support@mr-john-it.com）",
+        serviceType: "株式分析＆クオンツAIターミナル",
+        dataTypes: "アカウント情報、ポートフォリオ・仮想取引データ、分析設定、検索履歴など",
+        isInvestmentApp: true
     }
 };
 
@@ -26,7 +35,10 @@ const defaultConfig = {
     name: "本アプリ",
     owner: "Sho Shibata",
     date: "2026年6月13日",
-    contact: "お問い合わせ窓口"
+    contact: "お問い合わせ窓口",
+    serviceType: "アプリケーション",
+    dataTypes: "登録データ、設定情報など",
+    isInvestmentApp: false
 };
 
 /**
@@ -57,8 +69,15 @@ function applyAppConfig(pageTitlePrefix) {
         document.querySelectorAll(".app-owner").forEach(el => el.textContent = config.owner);
         document.querySelectorAll(".app-date").forEach(el => el.textContent = config.date);
         document.querySelectorAll(".app-contact").forEach(el => el.textContent = config.contact);
+        document.querySelectorAll(".app-service-type").forEach(el => el.textContent = config.serviceType || defaultConfig.serviceType);
+        document.querySelectorAll(".app-data-types").forEach(el => el.textContent = config.dataTypes || defaultConfig.dataTypes);
+
+        // 5. Handle conditional elements (e.g. investment disclaimer items)
+        document.querySelectorAll(".investment-only").forEach(el => {
+            el.style.display = config.isInvestmentApp ? "" : "none";
+        });
         
-        // 5. Update document title
+        // 6. Update document title
         document.title = `${pageTitlePrefix} - ${config.name}`;
     });
 }
